@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ekda-wise Members of Khadayata Jyoti Samaj — members organised by Ekda (regional group)." />
+  <title>Ekda-wise Members | Khadayata Jyoti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .ekda-section-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--gold) 100%);
+      color: var(--white);
+      padding: 18px 25px;
+      border-radius: var(--radius) var(--radius) 0 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 40px;
+    }
+    .ekda-section-header h3 { font-size: 20px; font-weight: 800; }
+    .ekda-section-header span { font-size: 13px; opacity: 0.85; }
+    .ekda-section-header .ekda-count {
+      background: rgba(255,255,255,0.2);
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: auto;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .ekda-table-box {
+      background: var(--white);
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: 0 4px 20px var(--shadow-soft);
+      overflow: hidden;
+    }
+    .ekda-map-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
+      margin: 0 auto 50px;
+    }
+    .ekda-map-btn {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-decoration: none;
+      color: var(--text-dark);
+      display: block;
+    }
+    .ekda-map-btn:hover {
+      border-color: var(--primary);
+      background: var(--cream);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px var(--shadow);
+    }
+    .ekda-map-btn .ename { font-size: 17px; font-weight: 700; color: var(--primary); display: block; margin-bottom: 5px; }
+    .ekda-map-btn .ecount { font-size: 12px; color: var(--text-light); }
+    .ekda-map-btn .eregion { font-size: 11px; color: var(--gold); font-weight: 600; margin-bottom: 6px; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>📅 Khadayata Jyoti Magazine</span>
+      <span>🕉 Jay Shree Krishna</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">W</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">🕉</div>
+    <div class="header-text">
+      <h1>Khadayata Jyoti</h1>
+      <p class="tagline">✦ Jay Shree Krishna ✦</p>
+      <p class="sub-tagline">Official Magazine of the Khadayata Community since 1912</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li class="active">
+          <a href="members.html">Members <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="members.html">List of Members</a></li>
+            <li><a href="ekda-members.html">Ekda-wise Members</a></li>
+            <li><a href="forms.html#membership-form">Membership Form</a></li>
+            <li><a href="forms.html#membership-fees">Membership Fees</a></li>
+            <li><a href="forms.html#bank-details">Bank Details</a></li>
+          </ul>
+        </li>
+        <li><a href="shatabdi-varsh.html">Shatabdi Varsh</a></li>
+        <li><a href="yuva-vikas.html">Yuva Vikas Margdarshan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="forms.html">Forms <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="forms.html#shishyavruti">Shishyavruti Form</a></li>
+            <li><a href="forms.html#loan-form">Loan Form</a></li>
+            <li><a href="forms.html#tejasvi">Tejasvi Student Form</a></li>
+            <li><a href="forms.html#membership-form">Membership Form</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> <a href="members.html">Members</a> <span>›</span> Ekda-wise Members</div>
+      <h2>Ekda-wise Members</h2>
+      <p>Members of the Khadayata Samaj organised by their Ekda (regional community group)</p>
+    </div>
+  </div>
+
+  <section class="section section-alt">
+    <div class="container">
+
+      <!-- Ekda explanation -->
+      <div class="about-card-main fade-in" style="max-width:800px; margin:0 auto 50px;">
+        <span class="card-tag">What is an Ekda?</span>
+        <h4>The Ekda System in Khadayata Samaj</h4>
+        <p>An <strong>Ekda</strong> is a sub-group within the Khadayata Samaj, typically based on the geographic origin of families — the town or village from which they originally hailed. The Ekda system helps maintain community cohesion and facilitates local organisation of events, marriages, and welfare activities.</p>
+        <p>Members are listed under their respective Ekda for easier community connection. If you are unsure of your Ekda, contact the Karyalay for assistance.</p>
+      </div>
+
+      <!-- Ekda Map Buttons -->
+      <div class="section-header fade-in">
+        <span class="eyebrow">Browse by Ekda</span>
+        <h2>All Ekdas</h2>
+        <p>Select an Ekda to view members from that regional group</p>
+      </div>
+      <div class="ekda-map-grid fade-in">
+        <a href="#ekda-nadiad" class="ekda-map-btn">
+          <span class="eregion">Central Gujarat</span>
+          <span class="ename">Nadiad Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-anand" class="ekda-map-btn">
+          <span class="eregion">Central Gujarat</span>
+          <span class="ename">Anand Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-ahmedabad" class="ekda-map-btn">
+          <span class="eregion">North Gujarat</span>
+          <span class="ename">Ahmedabad Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-vadodara" class="ekda-map-btn">
+          <span class="eregion">East Gujarat</span>
+          <span class="ename">Vadodara Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-surat" class="ekda-map-btn">
+          <span class="eregion">South Gujarat</span>
+          <span class="ename">Surat Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-rajkot" class="ekda-map-btn">
+          <span class="eregion">Saurashtra</span>
+          <span class="ename">Rajkot Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-mumbai" class="ekda-map-btn">
+          <span class="eregion">Maharashtra</span>
+          <span class="ename">Mumbai Ekda</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+        <a href="#ekda-other" class="ekda-map-btn">
+          <span class="eregion">Pan-India</span>
+          <span class="ename">Other Ekdas</span>
+          <span class="ecount">See Members ↓</span>
+        </a>
+      </div>
+
+      <!-- NADIAD EKDA -->
+      <div id="ekda-nadiad" class="fade-in ekda-group" data-ekda="nadiad">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Nadiad Ekda</h3>
+            <span>Central Gujarat — Members from Nadiad and surrounding areas</span>
+          </div>
+          <span class="ekda-count">3 Members (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shri Rameshbhai Khadayata</td><td>Nadiad</td><td>Life Member</td><td>2018</td></tr>
+              <tr><td>2</td><td>Shri Chandrakant Parikh</td><td>Nadiad</td><td>Annual Member</td><td>2022</td></tr>
+              <tr><td>3</td><td>Shri Nareshbhai Shah</td><td>Nadiad</td><td>Patron Member</td><td>2014</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ANAND EKDA -->
+      <div id="ekda-anand" class="fade-in ekda-group" data-ekda="anand">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Anand Ekda</h3>
+            <span>Central Gujarat — Members from Anand and surrounding areas</span>
+          </div>
+          <span class="ekda-count">3 Members (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shri Harishbhai Mehta</td><td>Anand</td><td>Life Member</td><td>2019</td></tr>
+              <tr><td>2</td><td>Shrimati Sumitraben Shah</td><td>Anand</td><td>Life Member</td><td>2021</td></tr>
+              <tr><td>3</td><td>Shri Alpeshbhai Khadayata</td><td>Anand</td><td>Life Member</td><td>2022</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- AHMEDABAD EKDA -->
+      <div id="ekda-ahmedabad" class="fade-in ekda-group" data-ekda="ahmedabad">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Ahmedabad Ekda</h3>
+            <span>North Gujarat — Members from Ahmedabad</span>
+          </div>
+          <span class="ekda-count">2 Members (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shri Dineshbhai Shah</td><td>Ahmedabad</td><td>Patron Member</td><td>2017</td></tr>
+              <tr><td>2</td><td>Shri Pareshbhai Mehta</td><td>Ahmedabad</td><td>Life Member</td><td>2020</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VADODARA EKDA -->
+      <div id="ekda-vadodara" class="fade-in ekda-group" data-ekda="vadodara">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Vadodara Ekda</h3>
+            <span>East Gujarat — Members from Vadodara (Baroda)</span>
+          </div>
+          <span class="ekda-count">2 Members (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shrimati Induben Vora</td><td>Vadodara</td><td>Life Member</td><td>2020</td></tr>
+              <tr><td>2</td><td>Shri Vikrambhai Vora</td><td>Vadodara</td><td>Annual Member</td><td>2023</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SURAT EKDA -->
+      <div id="ekda-surat" class="fade-in ekda-group" data-ekda="surat">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Surat Ekda</h3>
+            <span>South Gujarat — Members from Surat</span>
+          </div>
+          <span class="ekda-count">2 Members (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shri Bipinbhai Khadayata</td><td>Surat</td><td>Life Member</td><td>2016</td></tr>
+              <tr><td>2</td><td>Shrimati Chetanaben Parikh</td><td>Surat</td><td>Life Member</td><td>2018</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- RAJKOT EKDA -->
+      <div id="ekda-rajkot" class="fade-in ekda-group" data-ekda="rajkot">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Rajkot Ekda</h3>
+            <span>Saurashtra — Members from Rajkot</span>
+          </div>
+          <span class="ekda-count">1 Member (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shri Jayeshbhai Khadayata</td><td>Rajkot</td><td>Life Member</td><td>2019</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MUMBAI EKDA -->
+      <div id="ekda-mumbai" class="fade-in ekda-group" data-ekda="mumbai">
+        <div class="ekda-section-header">
+          <span>📍</span>
+          <div>
+            <h3>Mumbai Ekda</h3>
+            <span>Maharashtra — Members from Mumbai and surrounding areas</span>
+          </div>
+          <span class="ekda-count">2 Members (Sample)</span>
+        </div>
+        <div class="ekda-table-box">
+          <table class="members-table">
+            <thead><tr><th>#</th><th>Member Name</th><th>City</th><th>Membership Type</th><th>Year</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Shri Maheshbhai Zaveri</td><td>Mumbai</td><td>Special Patron</td><td>2015</td></tr>
+              <tr><td>2</td><td>Shri Hiteshbhai Zaveri</td><td>Mumbai</td><td>Life Member</td><td>2020</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OTHER EKDAS -->
+      <div id="ekda-other" class="fade-in ekda-group" data-ekda="other">
+        <div class="ekda-section-header" style="background: linear-gradient(135deg, var(--primary-dark) 0%, var(--gold) 100%);">
+          <span>🌐</span>
+          <div>
+            <h3>Other Ekdas (Pan-India &amp; International)</h3>
+            <span>Members from other cities, states, and countries</span>
+          </div>
+          <span class="ekda-count">Contact Karyalay</span>
+        </div>
+        <div class="ekda-table-box" style="padding:30px; text-align:center;">
+          <p style="color:var(--text-mid); font-size:15px; margin-bottom:16px;">
+            Members from other cities and international locations are listed in the printed Khadayata Jyoti magazine.
+            If you are from a different Ekda or unsure of your Ekda classification, please contact the Karyalay.
+          </p>
+          <a href="contact.html" class="btn btn-gold" style="border-radius:8px; padding:12px 26px; font-size:14px; display:inline-flex;">Contact Karyalay</a>
+        </div>
+      </div>
+
+      <p class="fade-in" style="margin-top:30px; font-size:13px; color:var(--text-light); text-align:center;">
+        The complete Ekda-wise member list is published in the printed Khadayata Jyoti magazine.
+        To register, update your Ekda, or request the full list, <a href="contact.html" style="color:var(--primary); font-weight:600;">contact us</a>.
+      </p>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>🕉 Khadayata Jyoti</h3>
+        <span class="brand-tag">Jay Shree Krishna from Khadayata Jyoti</span>
+        <p>The official magazine and community portal of the Khadayata Samaj — serving families across Gujarat and the world since 1912.</p>
+        <div class="footer-social">
+          <a href="#" class="fsocial">f</a>
+          <a href="#" class="fsocial">W</a>
+          <a href="#" class="fsocial">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="members.html">List of Members</a></li>
+          <li><a href="ekda-members.html">Ekda-wise Members</a></li>
+          <li><a href="shatabdi-varsh.html">Shatabdi Varsh</a></li>
+          <li><a href="yuva-vikas.html">Yuva Vikas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Forms</h4>
+        <ul>
+          <li><a href="forms.html#membership-form">Membership Form</a></li>
+          <li><a href="forms.html#shishyavruti">Shishyavruti Form</a></li>
+          <li><a href="forms.html#loan-form">Loan Form</a></li>
+          <li><a href="forms.html#tejasvi">Tejasvi Student Form</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Advertise With Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Khadayata Jyoti. All rights reserved.</p>
+      <span class="footer-jay">✦ Jay Shree Krishna ✦</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

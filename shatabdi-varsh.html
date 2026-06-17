@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shatabdi Varsh — The Centenary Year of the Khadayata Samaj, celebrating 100 years of organised community life." />
+  <title>Shatabdi Varsh | Khadayata Jyoti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .event-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 4px 18px var(--shadow-soft);
+      border-left: 5px solid var(--gold);
+      transition: all var(--transition);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .event-card:hover { transform: translateX(6px); box-shadow: 0 8px 30px var(--shadow); }
+    .event-date-box {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 10px;
+      padding: 12px 16px;
+      text-align: center;
+      min-width: 70px;
+      flex-shrink: 0;
+    }
+    .event-date-box .day { font-size: 24px; font-weight: 900; line-height: 1; }
+    .event-date-box .month { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+    .event-info h4 { font-size: 17px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .event-info p { font-size: 13.5px; color: var(--text-mid); line-height: 1.65; }
+    .event-info .location { font-size: 12.5px; color: var(--gold); font-weight: 600; margin-top: 6px; display: flex; align-items: center; gap: 5px; }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .achievement-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 3px 15px var(--shadow-soft);
+      border-top: 4px solid var(--primary);
+      transition: all var(--transition);
+    }
+    .achievement-card:hover { transform: translateY(-6px); box-shadow: 0 12px 35px var(--shadow); }
+    .achievement-card .icon { font-size: 44px; margin-bottom: 14px; }
+    .achievement-card h4 { font-size: 17px; color: var(--primary); font-weight: 700; margin-bottom: 8px; }
+    .achievement-card p { font-size: 13.5px; color: var(--text-mid); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>📅 Khadayata Jyoti Magazine</span>
+      <span>🕉 Jay Shree Krishna</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">W</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">🕉</div>
+    <div class="header-text">
+      <h1>Khadayata Jyoti</h1>
+      <p class="tagline">✦ Jay Shree Krishna ✦</p>
+      <p class="sub-tagline">Official Magazine of the Khadayata Community since 1912</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li>
+          <a href="members.html">Members <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="members.html">List of Members</a></li>
+            <li><a href="ekda-members.html">Ekda-wise Members</a></li>
+            <li><a href="forms.html#membership-form">Membership Form</a></li>
+            <li><a href="forms.html#membership-fees">Membership Fees</a></li>
+            <li><a href="forms.html#bank-details">Bank Details</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="shatabdi-varsh.html">Shatabdi Varsh</a></li>
+        <li><a href="yuva-vikas.html">Yuva Vikas Margdarshan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="forms.html">Forms <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="forms.html#shishyavruti">Shishyavruti Form</a></li>
+            <li><a href="forms.html#loan-form">Loan Form</a></li>
+            <li><a href="forms.html#tejasvi">Tejasvi Student Form</a></li>
+            <li><a href="forms.html#membership-form">Membership Form</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Shatabdi Varsh</div>
+      <h2>Shatabdi Varsh</h2>
+      <p>Celebrating 100 years of organised Khadayata community life — 1912 to 2012 and beyond</p>
+    </div>
+  </div>
+
+  <!-- SHATABDI HERO BANNER -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="shatabdi-banner fade-in">
+        <div class="year">100</div>
+        <h3>Shatabdi Varsh — 1912 to 2012</h3>
+        <p>A century of unity, education, culture, and community service. The Khadayata Samaj marked its centenary with year-long celebrations, commemorations, and a renewed commitment to the values that have guided us for a hundred years.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SHATABDI VARSH -->
+  <section class="section section-cream">
+    <div class="section-header fade-in">
+      <span class="eyebrow">The Centenary</span>
+      <h2>What is Shatabdi Varsh?</h2>
+      <p>The landmark 100th anniversary of the Khadayata Samaj organisation</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <h3>A Century of Service to the Community</h3>
+        <p>In 1912, a small group of visionary Khadayata community members in Bombay came together to establish the first formal Khadayata Samaj organisation. A century later, in 2012, the community celebrated this extraordinary milestone — the <strong>Shatabdi Varsh</strong>.</p>
+        <p>The Shatabdi Varsh was not merely a celebration of the past; it was a reaffirmation of the community's commitment to education, cultural preservation, welfare, and the spiritual values that have defined the Khadayata identity for over 700 years.</p>
+        <p>Events were held across Gujarat and beyond, bringing together thousands of Khadayata families to commemorate a century of organised community life, honour community leaders, and chart the vision for the next hundred years.</p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🏅</div>
+            <div class="highlight-text"><strong>Community Awards</strong><span>Honouring outstanding members</span></div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">📖</div>
+            <div class="highlight-text"><strong>Special Publication</strong><span>Centenary issue of Khadayata Jyoti</span></div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎭</div>
+            <div class="highlight-text"><strong>Cultural Events</strong><span>Programmes across Gujarat</span></div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🤝</div>
+            <div class="highlight-text"><strong>Community Pledges</strong><span>Renewed commitment to samaj</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual fade-in">
+        <div class="about-card-main" style="background: linear-gradient(145deg, var(--primary-dark), #8B5A2B);">
+          <span class="card-tag">Shatabdi 2012</span>
+          <h4>First Khadayata Parishad — Nadiad, 1914</h4>
+          <p>The roots of the Shatabdi Varsh lie in the very first Khadayata Parishad, convened in Nadiad in 1914. Delegates from across Gujarat gathered to shape the future of the community — a tradition that continues to this day.</p>
+          <p style="margin-top:12px;">The Shatabdi Varsh Parishad of 2012 echoed that founding spirit, drawing delegates and community members from India and across the world.</p>
+          <div class="founded" style="margin-top:16px;">🏛 1912 → 2012 → 2112 onward</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY ACHIEVEMENTS -->
+  <section class="section section-alt">
+    <div class="section-header fade-in">
+      <span class="eyebrow">100 Years of Progress</span>
+      <h2>Centenary Achievements</h2>
+      <p>What the Khadayata Samaj accomplished in its first century</p>
+    </div>
+    <div class="achievement-grid">
+      <div class="achievement-card fade-in">
+        <div class="icon">🎓</div>
+        <h4>Kelavani Mandal</h4>
+        <p>The Khadayata Education Society (est. 1916) has disbursed crores of rupees in scholarships and interest-free educational loans over 100 years, enabling thousands of students to achieve higher education.</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="icon">🏠</div>
+        <h4>Khadayata Bhavans</h4>
+        <p>Community centres established in Bombay, Ahmedabad, Baroda, and other major cities provided housing and support for Khadayata members migrating to urban areas for education and work.</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="icon">🛕</div>
+        <h4>Religious Facilities</h4>
+        <p>The Samaj supported the establishment and maintenance of religious facilities and temples at Mahudi, Gokul, and Nathdwara — important pilgrimage sites for the Khadayata community.</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="icon">👩</div>
+        <h4>Women's Empowerment</h4>
+        <p>The Mahila Mandal has run programmes for women's advancement, skill training, and social participation — ensuring women are integral to the community's progress.</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="icon">📰</div>
+        <h4>Khadayata Jyoti Magazine</h4>
+        <p>The magazine has served as the community's voice for decades — publishing news, articles, member directories, and keeping the Khadayata family connected across India and the world.</p>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="icon">🤝</div>
+        <h4>Charitable Trust</h4>
+        <p>The Janata Charitable Trust has provided welfare support to community members in need — financial assistance, medical support, and disaster relief over the decades.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHATABDI EVENTS -->
+  <section class="section section-cream">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Shatabdi Programme</span>
+      <h2>Key Shatabdi Events</h2>
+      <p>Major events held during the Khadayata Samaj Shatabdi Varsh celebrations</p>
+    </div>
+    <div class="container" style="max-width:800px;">
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="event-card fade-in">
+          <div class="event-date-box"><div class="day">1914</div><div class="month">Foundation</div></div>
+          <div class="event-info">
+            <h4>First Khadayata Parishad</h4>
+            <p>The inaugural grand convention of the Khadayata Samaj was held in Nadiad, with delegates from across Gujarat. This event established the formal governance structure of the community.</p>
+            <div class="location">📍 Nadiad, Gujarat</div>
+          </div>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date-box"><div class="day">2012</div><div class="month">Shatabdi</div></div>
+          <div class="event-info">
+            <h4>Shatabdi Mahaparishad</h4>
+            <p>The centenary grand convention of the Khadayata Samaj — a major gathering of community members from across India and the world. Special awards, resolutions, and the launch of the centenary issue of Khadayata Jyoti.</p>
+            <div class="location">📍 Gujarat, India</div>
+          </div>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date-box"><div class="day">Shata</div><div class="month">Varsh</div></div>
+          <div class="event-info">
+            <h4>Cultural Programmes &amp; Exhibitions</h4>
+            <p>Year-long cultural programmes, historical exhibitions documenting 100 years of community history, theatrical performances, and cultural competitions were held across Gujarat during the Shatabdi Varsh.</p>
+            <div class="location">📍 Multiple cities across Gujarat</div>
+          </div>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date-box"><div class="day">Shata</div><div class="month">Awards</div></div>
+          <div class="event-info">
+            <h4>Samaj Ratna Awards</h4>
+            <p>Outstanding community members who made significant contributions to education, culture, business, and social service were honoured with Samaj Ratna awards during the Shatabdi celebrations.</p>
+            <div class="location">📍 Gujarat, India</div>
+          </div>
+        </div>
+        <div class="event-card fade-in">
+          <div class="event-date-box"><div class="day">Shata</div><div class="month">Special</div></div>
+          <div class="event-info">
+            <h4>Centenary Publication</h4>
+            <p>A special Shatabdi Varsh issue of Khadayata Jyoti was published — a collector's edition documenting 100 years of community history, notable achievements, and the stories of Khadayata families across India.</p>
+            <div class="location">📰 Khadayata Jyoti — Special Issue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section membership-section">
+    <div class="section-header fade-in">
+      <span class="eyebrow">Our Legacy Continues</span>
+      <h2>The Next Century Begins Now</h2>
+      <p>The Shatabdi Varsh marked a milestone, not an end. The Khadayata Samaj looks ahead with renewed energy, vision, and commitment to the next generation.</p>
+    </div>
+    <div class="text-center fade-in">
+      <a href="yuva-vikas.html" class="btn btn-white" style="margin-right:14px;">🎓 Youth Development</a>
+      <a href="members.html" class="btn btn-outline-white">👥 Join the Samaj</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>🕉 Khadayata Jyoti</h3>
+        <span class="brand-tag">Jay Shree Krishna from Khadayata Jyoti</span>
+        <p>The official magazine and community portal of the Khadayata Samaj — serving families across Gujarat and the world since 1912.</p>
+        <div class="footer-social">
+          <a href="#" class="fsocial">f</a>
+          <a href="#" class="fsocial">W</a>
+          <a href="#" class="fsocial">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="members.html">List of Members</a></li>
+          <li><a href="ekda-members.html">Ekda-wise Members</a></li>
+          <li><a href="shatabdi-varsh.html">Shatabdi Varsh</a></li>
+          <li><a href="yuva-vikas.html">Yuva Vikas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Forms</h4>
+        <ul>
+          <li><a href="forms.html#membership-form">Membership Form</a></li>
+          <li><a href="forms.html#shishyavruti">Shishyavruti Form</a></li>
+          <li><a href="forms.html#loan-form">Loan Form</a></li>
+          <li><a href="forms.html#tejasvi">Tejasvi Student Form</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Advertise With Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Khadayata Jyoti. All rights reserved.</p>
+      <span class="footer-jay">✦ Jay Shree Krishna ✦</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

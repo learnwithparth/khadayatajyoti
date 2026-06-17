@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forms — Khadayata Jyoti. Download Shishyavruti, Loan, Tejasvi Student, and Membership forms." />
+  <title>Forms | Khadayata Jyoti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .form-section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 3px solid var(--gold);
+    }
+    .form-section-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--gold));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      color: var(--white);
+      flex-shrink: 0;
+      box-shadow: 0 4px 15px var(--shadow);
+    }
+    .form-section-header h3 { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .form-section-header p { font-size: 13.5px; color: var(--text-light); }
+    .form-section-block {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 4px 25px var(--shadow-soft);
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
+      scroll-margin-top: 80px;
+    }
+    .form-section-block:hover { border-color: var(--gold); }
+    .form-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+    .form-detail-grid .info-col h4 { font-size: 16px; color: var(--primary); margin-bottom: 10px; font-weight: 700; }
+    .form-detail-grid .info-col ul { padding-left: 18px; }
+    .form-detail-grid .info-col ul li { font-size: 14px; color: var(--text-mid); margin-bottom: 7px; line-height: 1.6; list-style: disc; }
+    .download-box {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 25px;
+      border: 2px dashed var(--border);
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .download-box:hover { border-color: var(--primary); background: var(--white); }
+    .download-box .dl-icon { font-size: 48px; margin-bottom: 12px; }
+    .download-box h4 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+    .download-box p { font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: var(--white);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-download:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 6px 20px var(--shadow); }
+    .note-box {
+      background: var(--gold-pale);
+      border: 1px solid rgba(200,135,10,0.25);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: var(--text-mid);
+      margin-top: 18px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .note-box .note-icon { flex-shrink: 0; color: var(--gold); font-size: 18px; }
+    @media (max-width: 680px) { .form-detail-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-left">
+      <span>📅 Khadayata Jyoti Magazine</span>
+      <span>🕉 Jay Shree Krishna</span>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="social-link">f</a>
+      <a href="#" class="social-link">W</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">🕉</div>
+    <div class="header-text">
+      <h1>Khadayata Jyoti</h1>
+      <p class="tagline">✦ Jay Shree Krishna ✦</p>
+      <p class="sub-tagline">Official Magazine of the Khadayata Community since 1912</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-inner">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li>
+          <a href="members.html">Members <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="members.html">List of Members</a></li>
+            <li><a href="ekda-members.html">Ekda-wise Members</a></li>
+            <li><a href="forms.html#membership-form">Membership Form</a></li>
+            <li><a href="forms.html#membership-fees">Membership Fees</a></li>
+            <li><a href="forms.html#bank-details">Bank Details</a></li>
+          </ul>
+        </li>
+        <li><a href="shatabdi-varsh.html">Shatabdi Varsh</a></li>
+        <li><a href="yuva-vikas.html">Yuva Vikas Margdarshan</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="active">
+          <a href="forms.html">Forms <span class="arrow">▾</span></a>
+          <ul class="dropdown">
+            <li><a href="forms.html#shishyavruti">Shishyavruti Form</a></li>
+            <li><a href="forms.html#loan-form">Loan Form</a></li>
+            <li><a href="forms.html#tejasvi">Tejasvi Student Form</a></li>
+            <li><a href="forms.html#membership-form">Membership Form</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Forms</div>
+      <h2>Forms &amp; Applications</h2>
+      <p>Download membership, scholarship, loan, and award forms for the Khadayata Samaj</p>
+    </div>
+  </div>
+
+  <!-- FORMS QUICK JUMP -->
+  <section class="section section-alt" style="padding-bottom:10px;">
+    <div class="container">
+      <div class="ekda-tabs fade-in" style="justify-content:center;">
+        <a href="#shishyavruti" class="ekda-tab">🎓 Shishyavruti Form</a>
+        <a href="#loan-form" class="ekda-tab">💰 Loan Form</a>
+        <a href="#tejasvi" class="ekda-tab">🏆 Tejasvi Student Form</a>
+        <a href="#membership-form" class="ekda-tab">📋 Membership Form</a>
+        <a href="#membership-fees" class="ekda-tab">💲 Membership Fees</a>
+        <a href="#bank-details" class="ekda-tab">🏦 Bank Details</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" style="padding-top:30px;">
+    <div class="container">
+
+      <!-- SHISHYAVRUTI FORM -->
+      <div class="form-section-block fade-in" id="shishyavruti">
+        <div class="form-section-header">
+          <div class="form-section-icon">🎓</div>
+          <div>
+            <h3>Shishyavruti Form (Scholarship Application)</h3>
+            <p>For Khadayata students seeking financial scholarship support for higher education</p>
+          </div>
+        </div>
+        <div class="form-detail-grid">
+          <div class="info-col">
+            <h4>Who Can Apply?</h4>
+            <ul>
+              <li>Students belonging to the Khadayata community</li>
+              <li>Enrolled in a recognised educational institution</li>
+              <li>Pursuing Class 10 onwards — graduation, postgraduate, or professional degrees</li>
+              <li>Students with financial need (need-based) or academic merit (merit-based)</li>
+              <li>Must have passed the previous year's examination</li>
+            </ul>
+            <h4 style="margin-top:20px;">Documents Required</h4>
+            <ul>
+              <li>Latest mark sheet / result</li>
+              <li>Community certificate (Khadayata)</li>
+              <li>Income certificate (for need-based)</li>
+              <li>School / college admission proof</li>
+              <li>Passport-size photograph</li>
+              <li>Bank account details (student's or parent's)</li>
+            </ul>
+            <div class="note-box">
+              <span class="note-icon">ℹ</span>
+              <span>Scholarship applications are accepted annually between June and September. Incomplete applications will not be considered. Decisions of the Education Committee are final.</span>
+            </div>
+          </div>
+          <div>
+            <div class="download-box">
+              <div class="dl-icon">📄</div>
+              <h4>Shishyavruti Form 2025</h4>
+              <p>Scholarship application form for Khadayata students — current academic year</p>
+              <button class="btn-download" onclick="alert('Contact the Karyalay at info@khadayatajyoti.org to receive the latest form. Jay Shree Krishna.')">⬇ Download Form</button>
+            </div>
+            <div class="download-box" style="margin-top:16px;">
+              <div class="dl-icon">📄</div>
+              <h4>Shishyavruti Form 2020 (Archive)</h4>
+              <p>Previous year's scholarship form — for reference</p>
+              <button class="btn-download" style="background:var(--gold);" onclick="alert('Contact the Karyalay for archived forms. Jay Shree Krishna.')">⬇ Download Archive</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOAN FORM -->
+      <div class="form-section-block fade-in" id="loan-form">
+        <div class="form-section-header">
+          <div class="form-section-icon">💰</div>
+          <div>
+            <h3>Loan Form (Interest-Free Education Loan)</h3>
+            <p>For Khadayata students requiring interest-free loans for higher education expenses</p>
+          </div>
+        </div>
+        <div class="form-detail-grid">
+          <div class="info-col">
+            <h4>About the Education Loan</h4>
+            <ul>
+              <li>Interest-free loan — no interest charged, ever</li>
+              <li>Available for tuition fees, books, hostel, and related expenses</li>
+              <li>Repayable after completion of education, in manageable instalments</li>
+              <li>For Khadayata community members in financial need</li>
+              <li>Amount determined by the Education Committee based on need and availability</li>
+            </ul>
+            <h4 style="margin-top:20px;">Documents Required</h4>
+            <ul>
+              <li>Completed loan form with all sections filled</li>
+              <li>Community certificate (Khadayata)</li>
+              <li>Income proof of family (latest year)</li>
+              <li>Educational institution admission letter</li>
+              <li>Fee structure from the institution</li>
+              <li>Guarantor details (a Khadayata community member)</li>
+              <li>Passport-size photograph</li>
+            </ul>
+            <div class="note-box">
+              <span class="note-icon">ℹ</span>
+              <span>Loans are disbursed to students in genuine financial need. Repayment schedules are arranged after discussion. Members are expected to repay so future students can also benefit.</span>
+            </div>
+          </div>
+          <div>
+            <div class="download-box">
+              <div class="dl-icon">💼</div>
+              <h4>Loan Form 2025</h4>
+              <p>Education loan application form for the current academic year</p>
+              <button class="btn-download" onclick="alert('Contact the Karyalay at info@khadayatajyoti.org to receive the latest form. Jay Shree Krishna.')">⬇ Download Form</button>
+            </div>
+            <div class="download-box" style="margin-top:16px;">
+              <div class="dl-icon">💼</div>
+              <h4>Loan Form 2020 (Archive)</h4>
+              <p>Previous year's loan form — for reference</p>
+              <button class="btn-download" style="background:var(--gold);" onclick="alert('Contact the Karyalay for archived forms. Jay Shree Krishna.')">⬇ Download Archive</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEJASVI STUDENT FORM -->
+      <div class="form-section-block fade-in" id="tejasvi">
+        <div class="form-section-header">
+          <div class="form-section-icon">🏆</div>
+          <div>
+            <h3>Tejasvi Student Form (Award Nomination)</h3>
+            <p>For nominating outstanding Khadayata student achievers for the prestigious Tejasvi Student Award</p>
+          </div>
+        </div>
+        <div class="form-detail-grid">
+          <div class="info-col">
+            <h4>About the Tejasvi Student Award</h4>
+            <ul>
+              <li>Recognises the highest academic achievers among Khadayata youth</li>
+              <li>Awarded at the annual Khadayata Parishad — a prestigious community honour</li>
+              <li>Recipients are published by name in Khadayata Jyoti magazine</li>
+              <li>Open to students from Class 10 onwards who achieve outstanding marks</li>
+              <li>Students who secure distinctions in board exams, university examinations, or professional courses</li>
+            </ul>
+            <h4 style="margin-top:20px;">How to Nominate</h4>
+            <ul>
+              <li>Download and complete the Tejasvi Student Form</li>
+              <li>Attach mark sheets / result documents</li>
+              <li>Parent or guardian must certify the application</li>
+              <li>Submit before the nomination deadline (announced in the magazine)</li>
+              <li>Self-nominations and parent nominations are both accepted</li>
+            </ul>
+            <div class="note-box">
+              <span class="note-icon">🏅</span>
+              <span>The Tejasvi Award is a community honour — nominated students are celebrated at the Parishad and inspire the next generation of Khadayata youth.</span>
+            </div>
+          </div>
+          <div>
+            <div class="download-box">
+              <div class="dl-icon">🏅</div>
+              <h4>Tejasvi Student Form 2025</h4>
+              <p>Award nomination form for outstanding Khadayata student achievers</p>
+              <button class="btn-download" onclick="alert('Contact the Karyalay at info@khadayatajyoti.org to receive the latest form. Jay Shree Krishna.')">⬇ Download Form</button>
+            </div>
+            <div class="download-box" style="margin-top:16px;">
+              <div class="dl-icon">🏅</div>
+              <h4>Tejasvi Student Form 2019 (Archive)</h4>
+              <p>Previous year's nomination form — for reference</p>
+              <button class="btn-download" style="background:var(--gold);" onclick="alert('Contact the Karyalay for archived forms. Jay Shree Krishna.')">⬇ Download Archive</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEMBERSHIP FORM -->
+      <div class="form-section-block fade-in" id="membership-form">
+        <div class="form-section-header">
+          <div class="form-section-icon">📋</div>
+          <div>
+            <h3>Membership Form</h3>
+            <p>Register as a member of the Khadayata Jyoti Samaj and receive the magazine and member benefits</p>
+          </div>
+        </div>
+        <div class="form-detail-grid">
+          <div class="info-col">
+            <h4 id="membership-fees">Membership Tiers &amp; Fees</h4>
+            <ul>
+              <li><strong>Annual Membership — ₹500:</strong> One-year membership, full benefits</li>
+              <li><strong>Life Membership — ₹2,500:</strong> Permanent listing in member directory, magazine subscription for life</li>
+              <li><strong>Patron — ₹10,000:</strong> Community patron recognition</li>
+              <li><strong>Special Patron — ₹25,000:</strong> Premier recognition in magazine and events</li>
+              <li><strong>Gnyati Ratna — ₹1,50,000:</strong> The highest community honour</li>
+            </ul>
+            <h4 style="margin-top:20px;">Membership Benefits</h4>
+            <ul>
+              <li>Regular Khadayata Jyoti magazine issues</li>
+              <li>Listing in the community member directory</li>
+              <li>Access to Ekda-wise member network</li>
+              <li>Eligibility for scholarship and loan programmes</li>
+              <li>Invitations to Parishad and community events</li>
+              <li>Free matrimonial listing in magazine (Patron and above)</li>
+            </ul>
+            <div class="note-box" id="bank-details">
+              <span class="note-icon">🏦</span>
+              <span><strong>Bank Details:</strong> Pay your membership fee directly to the Khadayata Jyoti bank account. Contact the Karyalay at <strong>info@khadayatajyoti.org</strong> for the current bank account number, IFSC code, and UPI payment details.</span>
+            </div>
+          </div>
+          <div>
+            <div class="download-box">
+              <div class="dl-icon">📋</div>
+              <h4>Membership Form 2025</h4>
+              <p>New member registration form — join the Khadayata Samaj today</p>
+              <button class="btn-download" onclick="alert('Contact the Karyalay at info@khadayatajyoti.org to receive the membership form. Jay Shree Krishna.')">⬇ Download Form</button>
+            </div>
+            <div class="download-box" style="margin-top:16px; border-color:var(--primary);">
+              <div class="dl-icon">🏦</div>
+              <h4>Request Bank Details</h4>
+              <p>Get the current bank account and UPI payment details to submit your membership fee</p>
+              <a href="contact.html" class="btn-download" style="background:var(--gold);">✉ Contact Karyalay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMPORTANT NOTE -->
+  <section class="section membership-section" style="padding:40px 5%;">
+    <div class="container" style="max-width:750px; text-align:center;">
+      <div class="fade-in">
+        <p style="font-size:18px; color:var(--gold-light); font-weight:700; margin-bottom:14px;">📞 Need Help with a Form?</p>
+        <p style="color:rgba(255,255,255,0.85); font-size:15px; line-height:1.8; margin-bottom:24px;">
+          If you have any questions about which form to use, how to complete it, or where to submit it — do not hesitate to contact the Karyalay. We are here to help every member of the Khadayata community.
+        </p>
+        <a href="contact.html" class="btn btn-white">✉ Contact the Karyalay</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>🕉 Khadayata Jyoti</h3>
+        <span class="brand-tag">Jay Shree Krishna from Khadayata Jyoti</span>
+        <p>The official magazine and community portal of the Khadayata Samaj — serving families across Gujarat and the world since 1912.</p>
+        <div class="footer-social">
+          <a href="#" class="fsocial">f</a>
+          <a href="#" class="fsocial">W</a>
+          <a href="#" class="fsocial">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="members.html">List of Members</a></li>
+          <li><a href="ekda-members.html">Ekda-wise Members</a></li>
+          <li><a href="shatabdi-varsh.html">Shatabdi Varsh</a></li>
+          <li><a href="yuva-vikas.html">Yuva Vikas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Forms</h4>
+        <ul>
+          <li><a href="forms.html#membership-form">Membership Form</a></li>
+          <li><a href="forms.html#shishyavruti">Shishyavruti Form</a></li>
+          <li><a href="forms.html#loan-form">Loan Form</a></li>
+          <li><a href="forms.html#tejasvi">Tejasvi Student Form</a></li>
+          <li><a href="forms.html#bank-details">Bank Details</a></li>
+          <li><a href="forms.html#membership-fees">Membership Fees</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Advertise With Us</a></li>
+          <li><a href="contact.html">Subscribe</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Khadayata Jyoti. All rights reserved.</p>
+      <span class="footer-jay">✦ Jay Shree Krishna ✦</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
